@@ -1,0 +1,39 @@
+{
+  "feature_columns": [
+    "haversine_distance",
+    "bearing",
+    "hour_of_day",
+    "day_of_week",
+    "is_peak_hour",
+    "is_weekend",
+    "traffic_encoded",
+    "distance_x_traffic",
+    "speed_estimate",
+    "pickup_lat",
+    "pickup_lon",
+    "drop_lat",
+    "drop_lon",
+    "eta_physics_estimate"
+  ],
+  "target_column": "delivery_time_minutes",
+  "train_samples": 8000,
+  "test_samples": 2000,
+  "models": {
+    "xgboost": {
+      "file": "xgboost_model.pkl",
+      "metrics": {
+        "mae": 3.2002,
+        "rmse": 3.9845,
+        "r2": 0.9983
+      }
+    },
+    "random_forest": {
+      "file": "random_forest_model.pkl",
+      "metrics": {
+        "mae": 3.5024,
+        "rmse": 4.4749,
+        "r2": 0.9979
+      }
+    }
+  }
+}
